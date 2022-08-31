@@ -55,6 +55,17 @@ const App = () => {
     });
   };
 
+  const shuffleData = () => {
+    let oldData = [...data];
+    let newData = [];
+    for (let i = data.length; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * i);
+      newData.push(oldData[randomIndex]);
+      oldData.splice(randomIndex, 1);
+    }
+    return newData;
+  };
+
   if (!loaded) {
     return (
       <div className="App">
