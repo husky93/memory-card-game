@@ -66,6 +66,10 @@ const App = () => {
     return newData;
   };
 
+  const handleCardClick = () => {
+    setData(shuffleData());
+  };
+
   if (!loaded) {
     return (
       <div className="App">
@@ -75,8 +79,8 @@ const App = () => {
   } else {
     return (
       <div className="App">
-        {images.map((image) => (
-          <img src={image.src} />
+        {data.map((item) => (
+          <img src={item.image.src} />
         ))}
       </div>
     );
