@@ -6,22 +6,40 @@ import importAllImages from '../modules/importAllImages';
 const App = () => {
   const [loaded, setLoaded] = useState(false);
   const [images, setImages] = useState([]);
+  const [data, setData] = useState([]);
+
   const isFirstRender = useRef(true);
 
   useEffect(() => {
     if (isFirstRender.current) {
       Promise.all(loadImages())
-        .then((values) => {
-          // values.forEach((module) => {
-          //   const img = <img src={module.default}></img>;
-          // });
-          console.log(values);
+        .then(() => {
           setLoaded(true);
         })
         .catch((err) => console.log(err));
     }
     isFirstRender.current = false;
   }, []);
+
+  useEffect(() => {
+    const createInitialData = () => {
+      const initialData = [];
+      images.forEach((image) => {
+        const imageSource = image.src;
+        const nameRaw = imageSource.split('media/').pop().split('.')[0];
+        const nameSplit = nameRaw.split('-');
+        const nameUpperCase = nameSplit.map(
+          (word) => word.charAt(0).toUpperCase() + word.substring(1)
+        );
+        const name = nameUpperCase.join(' ');
+        initialData.push({ name, image });
+      });
+      return initialData;
+    };
+    if (loaded) {
+      setData(createInitialData());
+    }
+  }, [loaded, images]);
 
   const loadImages = () => {
     const importedImages = importAllImages();
