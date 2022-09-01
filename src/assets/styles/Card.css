@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  height: 275px;
+  width: 170px;
+  object-fit: cover;
+}
+
+.card-title {
+
+}

@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Header from '../sections/Header';
 import Spinner from '../components/Spinner';
 import '../assets/styles/App.css';
 import importAllImages from '../modules/importAllImages';
+import Game from '../sections/Game';
 
 const App = () => {
   const [loaded, setLoaded] = useState(false);
@@ -72,16 +74,15 @@ const App = () => {
 
   if (!loaded) {
     return (
-      <div className="App">
+      <div className="App loading">
         <Spinner />
       </div>
     );
   } else {
     return (
       <div className="App">
-        {data.map((item) => (
-          <img src={item.image.src} />
-        ))}
+        <Header />
+        <Game handleCardClick={handleCardClick} data={data} />
       </div>
     );
   }

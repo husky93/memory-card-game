@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/styles/Card.css';
 
 const Card = (props) => {
   const { name, image } = props.data;
