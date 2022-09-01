@@ -76,10 +76,13 @@ const App = () => {
       return { ...item };
     });
     const index = newData.findIndex((x) => x.name.localeCompare(name) === 0);
-    if (index && !newData[index].clicked) {
+    console.log(index);
+    if (index >= 0 && !newData[index].clicked) {
+      console.log('yo');
       newData[index].clicked = true;
       setScore(score + 1);
-    } else if (index && newData[index].clicked) {
+    } else if (index >= 0 && newData[index].clicked) {
+      console.log('yo2');
       newData = newData.map((item) => {
         return { ...item, clicked: false };
       });
