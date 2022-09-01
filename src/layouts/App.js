@@ -1,15 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Header from '../sections/Header';
+import Game from '../sections/Game';
+import Score from '../sections/Score';
 import Spinner from '../components/Spinner';
 import '../assets/styles/App.css';
 import importAllImages from '../modules/importAllImages';
-import Game from '../sections/Game';
 
 const App = () => {
   const [loaded, setLoaded] = useState(false);
   const [images, setImages] = useState([]);
   const [data, setData] = useState([]);
   const [score, setScore] = useState(0);
+  const [topScore, setTopScore] = useState(0);
 
   const isFirstRender = useRef(true);
 
@@ -82,6 +84,9 @@ const App = () => {
       newData = newData.map((item) => {
         return { ...item, clicked: false };
       });
+      if (topScore < score) {
+        setTopScore(score);
+      }
       setScore(0);
     }
     setData(shuffleData(newData));
@@ -97,6 +102,7 @@ const App = () => {
     return (
       <div className="App">
         <Header />
+        <Score score={score} topScore={topScore} />
         <Game handleCardClick={handleCardClick} data={data} />
       </div>
     );
