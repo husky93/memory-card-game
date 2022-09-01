@@ -9,6 +9,7 @@ const App = () => {
   const [loaded, setLoaded] = useState(false);
   const [images, setImages] = useState([]);
   const [data, setData] = useState([]);
+  const [score, setScore] = useState(0);
 
   const isFirstRender = useRef(true);
 
@@ -70,14 +71,18 @@ const App = () => {
 
   const handleCardClick = (event) => {
     const name = event.target.textContent;
-    const newData = data.map((item) => {
+    let newData = data.map((item) => {
       return { ...item };
     });
-    console.log(newData);
     const index = newData.findIndex((x) => x.name.localeCompare(name) === 0);
-    if (!newData[index].clicked) {
+    if (index && !newData[index].clicked) {
       newData[index].clicked = true;
-    } else {
+      setScore(score + 1);
+    } else if (index && newData[index].clicked) {
+      newData = newData.map((item) => {
+        return { ...item, clicked: false };
+      });
+      setScore(0);
     }
     setData(shuffleData(newData));
   };
