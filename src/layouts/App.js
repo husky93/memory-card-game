@@ -34,7 +34,7 @@ const App = () => {
           (word) => word.charAt(0).toUpperCase() + word.substring(1)
         );
         const name = nameUpperCase.join(' ');
-        initialData.push({ name, image });
+        initialData.push({ name, image, clicked: false });
       });
       return initialData;
     };
@@ -68,7 +68,15 @@ const App = () => {
     return newData;
   };
 
-  const handleCardClick = () => {
+  const handleCardClick = (event) => {
+    const name = event.target.textContent;
+    console.log(event.target);
+    const newData = [...data];
+    const index = newData.findIndex((x) => x.name.localeCompare(name) === 0);
+    if (!newData[index].clicked) {
+      newData[index].clicked = true;
+    } else {
+    }
     setData(shuffleData());
   };
 

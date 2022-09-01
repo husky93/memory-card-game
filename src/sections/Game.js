@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../components/Card';
+import '../assets/styles/Game.css';
 
 const Game = (props) => {
   const { data, handleCardClick } = props;

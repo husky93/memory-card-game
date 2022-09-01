@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.card * {
+  pointer-events: none;
+}
+
 .card-image {
   height: 275px;
   width: 170px;
