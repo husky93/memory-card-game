@@ -57,8 +57,8 @@ const App = () => {
     });
   };
 
-  const shuffleData = () => {
-    let oldData = [...data];
+  const shuffleData = (data) => {
+    let oldData = data;
     let newData = [];
     for (let i = data.length; i > 0; i--) {
       const randomIndex = Math.floor(Math.random() * i);
@@ -70,14 +70,16 @@ const App = () => {
 
   const handleCardClick = (event) => {
     const name = event.target.textContent;
-    console.log(event.target);
-    const newData = [...data];
+    const newData = data.map((item) => {
+      return { ...item };
+    });
+    console.log(newData);
     const index = newData.findIndex((x) => x.name.localeCompare(name) === 0);
     if (!newData[index].clicked) {
       newData[index].clicked = true;
     } else {
     }
-    setData(shuffleData());
+    setData(shuffleData(newData));
   };
 
   if (!loaded) {
