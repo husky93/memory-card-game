@@ -1,6 +1,6 @@
 # memory-card-game
 
-Memory Card Game Single PAge Application. Click different card each time to increment your score. Project made with use of [React](https://github.com/facebook/react) JavaScript Library. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Memory Card Game Single Page Application. Click different card each time to increment your score. Project made with use of [React](https://github.com/facebook/react) JavaScript Library in order to practice React Hooks. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 **Live: [click here](https://husky93.github.io/memory-card-game/)**
 
