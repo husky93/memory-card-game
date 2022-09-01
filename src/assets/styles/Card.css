@@ -1,6 +1,10 @@
 .card {
+  flex: 1 0 15%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 6px;;
 }
 
 .card * {
@@ -11,6 +15,7 @@
   height: 275px;
   width: 170px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .card-title {

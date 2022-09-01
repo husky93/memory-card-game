@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Header from '../sections/Header';
 import Game from '../sections/Game';
-import Score from '../sections/Score';
 import Spinner from '../components/Spinner';
 import '../assets/styles/App.css';
 import importAllImages from '../modules/importAllImages';
@@ -101,8 +100,7 @@ const App = () => {
   } else {
     return (
       <div className="App">
-        <Header />
-        <Score score={score} topScore={topScore} />
+        <Header score={score} topScore={topScore} />
         <Game handleCardClick={handleCardClick} data={data} />
       </div>
     );

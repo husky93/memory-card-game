@@ -1,5 +1,6 @@
 import React from 'react';
 import ScoreText from '../components/ScoreText';
+import '../assets/styles/Score.css';
 
 const Score = (props) => {
   const { score, topScore } = props;

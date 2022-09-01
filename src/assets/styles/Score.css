@@ -1,16 +1,9 @@
-.header {
+.score {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 48px;
-  font-family: 'Game of Thrones', sans-serif;
+  flex-direction: column;
 }
 
-.header-container{
-  flex: 1;
-}
-
-.logo, .logo-subtitle{
+.score-text * {
   position: relative;
   color: #ac733c;
   font-size: 36px;
@@ -22,7 +15,7 @@
   color: transparent;
 }
 
-.logo:before, .logo-subtitle:before {
+.score-text *:before {
   content: attr(data-text);
   position: absolute;
   left: 2px;
@@ -31,6 +24,10 @@
   z-index: -2;
 }
 
-.logo-subtitle {
-  font-size: 16px;
+.score-text *{
+  font-size: 24px;
+}
+
+.score-highlighted {
+  font-size: 32px;
 }
