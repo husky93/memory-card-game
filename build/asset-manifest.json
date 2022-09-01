@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.76280948.css",
-    "main.js": "/static/js/main.813a5c78.js",
-    "static/js/787.ad653886.chunk.js": "/static/js/787.ad653886.chunk.js",
-    "static/media/daenerys-targaryen.webp": "/static/media/daenerys-targaryen.cc5226d13ee7896110bd.webp",
-    "static/media/walder-frey.webp": "/static/media/walder-frey.45213175131dad9017d7.webp",
-    "static/media/robert-baratheon.webp": "/static/media/robert-baratheon.d1e78ed061b112d8134c.webp",
-    "static/media/theon-greyjoy.webp": "/static/media/theon-greyjoy.54f51e71e19ddda98a4a.webp",
-    "static/media/tyrion-lannister.webp": "/static/media/tyrion-lannister.ad82eca9b1b274f56752.webp",
-    "static/media/jon-snow.webp": "/static/media/jon-snow.76e12bb8a19d791a9d7e.webp",
-    "static/media/arya-stark.webp": "/static/media/arya-stark.d05caedba3c739b2adc9.webp",
-    "static/media/maergery-tyrell.webp": "/static/media/maergery-tyrell.90fb7b47f37f17a2b346.webp",
-    "static/media/jamie-lannister.webp": "/static/media/jamie-lannister.111412d20cb454344885.webp",
-    "static/media/cecrsei-lannister.webp": "/static/media/cecrsei-lannister.1368a7859100a1d00eba.webp",
-    "static/media/sandor-clegane.webp": "/static/media/sandor-clegane.9930227c4576bee69be3.webp",
-    "static/media/brienne-of-tarth.webp": "/static/media/brienne-of-tarth.a66d4659259ca6a2f470.webp",
-    "static/media/Game of Thrones.ttf": "/static/media/Game of Thrones.71fa190a8a1a34123fa1.ttf",
-    "index.html": "/index.html",
-    "main.76280948.css.map": "/static/css/main.76280948.css.map",
-    "main.813a5c78.js.map": "/static/js/main.813a5c78.js.map",
-    "787.ad653886.chunk.js.map": "/static/js/787.ad653886.chunk.js.map"
+    "main.css": "./static/css/main.d231b1b0.css",
+    "main.js": "./static/js/main.652584ca.js",
+    "static/js/787.ad653886.chunk.js": "./static/js/787.ad653886.chunk.js",
+    "static/media/daenerys-targaryen.webp": "./static/media/daenerys-targaryen.cc5226d13ee7896110bd.webp",
+    "static/media/walder-frey.webp": "./static/media/walder-frey.45213175131dad9017d7.webp",
+    "static/media/robert-baratheon.webp": "./static/media/robert-baratheon.d1e78ed061b112d8134c.webp",
+    "static/media/theon-greyjoy.webp": "./static/media/theon-greyjoy.54f51e71e19ddda98a4a.webp",
+    "static/media/tyrion-lannister.webp": "./static/media/tyrion-lannister.ad82eca9b1b274f56752.webp",
+    "static/media/jon-snow.webp": "./static/media/jon-snow.76e12bb8a19d791a9d7e.webp",
+    "static/media/arya-stark.webp": "./static/media/arya-stark.d05caedba3c739b2adc9.webp",
+    "static/media/maergery-tyrell.webp": "./static/media/maergery-tyrell.90fb7b47f37f17a2b346.webp",
+    "static/media/jamie-lannister.webp": "./static/media/jamie-lannister.111412d20cb454344885.webp",
+    "static/media/cecrsei-lannister.webp": "./static/media/cecrsei-lannister.1368a7859100a1d00eba.webp",
+    "static/media/sandor-clegane.webp": "./static/media/sandor-clegane.9930227c4576bee69be3.webp",
+    "static/media/brienne-of-tarth.webp": "./static/media/brienne-of-tarth.a66d4659259ca6a2f470.webp",
+    "static/media/Game of Thrones.ttf": "./static/media/Game of Thrones.71fa190a8a1a34123fa1.ttf",
+    "index.html": "./index.html",
+    "main.d231b1b0.css.map": "./static/css/main.d231b1b0.css.map",
+    "main.652584ca.js.map": "./static/js/main.652584ca.js.map",
+    "787.ad653886.chunk.js.map": "./static/js/787.ad653886.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76280948.css",
-    "static/js/main.813a5c78.js"
+    "static/css/main.d231b1b0.css",
+    "static/js/main.652584ca.js"
   ]
 }
