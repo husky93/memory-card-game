@@ -1,10 +1,22 @@
 .card {
-  flex: 1 0 15%;
+  cursor: pointer;
+  width: 250px;
+  background-color: #4B4955;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 12px;
-  border-radius: 6px;;
+  border-radius: 6px;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(7, 3, 3, 0.5);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(7, 3, 3, 0.5);
+  box-shadow: 2px 2px 4px 0px rgba(7, 3, 3, 0.5);
+  transform: perspective(250px) translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  transition: all .4s cubic-bezier(.125, .625, .125, .875);
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card * {
@@ -12,12 +24,14 @@
 }
 
 .card-image {
-  height: 275px;
-  width: 170px;
+  height: 325px;
+  min-width: 175px;
+  width: 100%;
   object-fit: cover;
   border-radius: 4px;
 }
 
 .card-title {
-
+  margin: 12px 0 12px 0;
+  font-size: 18px;
 }
