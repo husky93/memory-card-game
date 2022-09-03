@@ -1,33 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/styles/Card.css';
 
 const Card = (props) => {
   const { name, image, clicked } = props.data;
+  const [style, setStyle] = useState({});
   const classes = clicked ? 'card clicked' : 'card';
 
   const handleMouseMove = (event) => {
-    const target = event.target.classList.contains('card')
-      ? event.target
-      : event.target.parentElement;
-    const halfWidth = target.clientWidth / 2;
-    const halfHeight = target.clientHeight / 2;
-    const mouseX = halfWidth - (event.pageX - target.offsetLeft);
-    const mouseY = halfHeight - (event.pageY - target.offsetTop);
+    const halfWidth = event.target.clientWidth / 2;
+    const halfHeight = event.target.clientHeight / 2;
+    const mouseX = halfWidth - (event.pageX - event.target.offsetLeft);
+    const mouseY = halfHeight - (event.pageY - event.target.offsetTop);
     const degX = (mouseY / halfHeight) * 3 + 'deg';
     const degY = (mouseX / halfWidth) * -3 + 'deg';
-    target.style.transform =
-      'perspective(250px) translate3d(-2px, -2px, 0) rotateX(' +
-      degX +
-      ') rotateY(' +
-      degY +
-      ')';
+    setStyle({
+      transform: `perspective(250px) translate3d(-2px, -2px, 0) rotateX(${degX}) rotateY(${degY})`,
+    });
   };
 
-  const handleMouseOut = (event) => {
-    const target = event.target.classList.contains('card')
-      ? event.target
-      : event.target.parentElement;
-    target.removeAttribute('style');
+  const handleMouseOut = () => {
+    setStyle({});
   };
 
   return (
@@ -36,6 +28,7 @@ const Card = (props) => {
       onClickCapture={props.handleCardClick}
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseOut}
+      style={style}
     >
       <img className="card-image" src={image.src} alt={`${name}`} />
       <strong className="card-title">{name}</strong>
